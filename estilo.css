@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container1{
+    width: 100%;
+}
+header{
+    height: 450px;
+}
+header img{
+    width: 100%;
+    height: 450px;
+}
+ .title{
+    position: relative;
+    z-index: 999;
+    text-align: center;
+}
+.title img{
+  color: black;
+ width: 50px;
+  height: 50px;
+}
+.slider{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 450px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 450px;
+    display: flex;
+}
+.slides input{
+  display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: #fff;
+}
+
+#radio1:checked~.first{
+   
+    margin-left: 0;
+}
+#radio2:checked~.first{
+    margin-left: -25%;
+}
+#radio3:checked~.first{
+   margin-left: -50%;
+}
+/*Centro*/
+.center{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 300px;
+    background: #434343;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+}
+.center p{
+   font-weight: bold;
+}
+
+span.btnCenter{
+    position: relative;
+    top: 90%;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    z-index: 2;
+}
+span.btnCenter:nth-of-type(2){
+    left: 30%;
+    text-align: left;
+}
+span.btnCenter:nth-of-type(1){
+    right: 100px;
+    text-align: left;
+}
+
+/*Article*/
+article{
+    background: #707070;
+    color: white;
+}
+.artigo{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.imgArticle img{
+    border-radius: 100%;
+    border: 10px solid #313131;
+}
+.textArticle{
+    width: 500px;
+}
+.textArticle p{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+/*Accordeon*/
+.acordeon{
+    background: #bfbfbf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  .widthAccordion{
+      width: 500px;
+  }
+
+  /*Form*/
+  .formulario{
+      padding-top: 10px;
+      display: flex;
+       justify-content: center;
+       align-items: center;
+       background: #434343;
+  }
+  form{
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+  }
+  form input{
+      background: #bfbfbf;
+      height: 35px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      border: none;
+      outline: none;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    textarea{
+        margin-top: 10px;
+        background: #bfbfbf;
+    }
+    button{
+        align-self: center;
+        width: 100px;
+        height: 30px;
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    button:hover{
+        background: #bfbfbf;
+    }
+    .inputEmail{
+        width: 49%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
+    }
+    .inputPhone{
+        width: 49%;
+        margin-left: 254px;
+        margin-top: -45px;
+    }
+    /*footer*/
+ footer{
+     background: #313131;
+     color: white;
+     height: 50px;
+     text-align: center;
+ }
+ footer h2{
+     padding-top: 10px;
+ }
+ @media (max-width: 767.98px) { 
+     .artigo{
+         text-align: center;
+     }
+     .textArticle p{
+        text-align: justify;
+    }
+    .inputEmail{
+        width: 100%;
+    }
+    .inputPhone{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+ }
+ 
